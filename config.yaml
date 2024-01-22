@@ -1,0 +1,21 @@
+buildConfiguration:
+  buildCommand: npm run build:local
+  installDependenciesStep:
+    command: npm install
+    requiredFiles:
+      - package.json
+      - package-lock.json
+      - .npmrc
+livePreviewConfiguration:
+  setupCommand: "npm run dev -- --port 8080"
+siteStream:
+  id: site-data
+  entityId: 4343719759278830624
+  fields:
+    - name
+    - c_deskHeader
+    - c_deskFooter
+  localization:
+    locales:
+      - en
+    primary: true
