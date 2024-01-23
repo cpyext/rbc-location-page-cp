@@ -37,6 +37,11 @@ export const config: TemplateConfig = {
       "slug",
       "geocodedCoordinate",
       "services",
+      "c_associatedAdvisors",
+      "c_associatedTeam",
+      "c_richTextDescription",
+      "c_heroBanner",
+
     ],
     // Defines the scope of entities that qualify for this stream.
     filter: {
@@ -122,6 +127,10 @@ const Location: Template<TemplateRenderProps> = ({
     mainPhone,
     geocodedCoordinate,
     services,
+    c_associatedAdvisors,
+    c_associatedTeam,
+    c_richTextDescription,
+    c_heroBanner,
   } = document;
 
 
@@ -129,13 +138,14 @@ const Location: Template<TemplateRenderProps> = ({
     <>
       <PageLayout _site={_site}>
         <Banner name={name} address={address} openTime={openTime}>
+          <div className="">Welcome to the New York Metro complex</div>
           <div className="bg-white h-40 w-1/5 flex items-center justify-center text-center flex-col space-y-4 rounded-lg">
             <div className="text-black text-base">Visit Us Today!</div>
-            <Cta
+            {/* <Cta
               buttonText="Get Directions"
               url="http://google.com"
               style="primary-cta"
-            />
+            /> */}
           </div>
         </Banner>
         <div className="centered-container">
