@@ -10,7 +10,7 @@ livePreviewConfiguration:
   setupCommand: "npm run dev -- --port 8080"
 siteStream:
   id: site-data
-  entityId: "4343719759278830624"
+  entityId: 4343719759278830624
   fields:
     - name
     - c_deskHeader
