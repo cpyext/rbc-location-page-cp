@@ -18,4 +18,3 @@ siteStream:
   localization:
     locales:
       - en
-    primary: true
