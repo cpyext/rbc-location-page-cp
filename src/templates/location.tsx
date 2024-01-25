@@ -131,47 +131,32 @@ const Location: Template<TemplateRenderProps> = ({
     c_associatedTeam,
     c_richTextDescription,
     c_heroBanner,
+    description,
   } = document;
 
 
   return (
     <>
-      <PageLayout _site={_site}>
-        <Banner name={name} address={address} openTime={openTime}>
-          <div className="">Welcome to the New York Metro complex</div>
-          <div className="bg-white h-40 w-1/5 flex items-center justify-center text-center flex-col space-y-4 rounded-lg">
-            <div className="text-black text-base">Visit Us Today!</div>
-            {/* <Cta
-              buttonText="Get Directions"
-              url="http://google.com"
-              style="primary-cta"
-            /> */}
-          </div>
-        </Banner>
-        <div className="centered-container">
-          <div className="section">
-            <div className="grid grid-cols-3 gap-x-10 gap-y-10">
-              <div className="bg-gray-100 p-5 space-y-12">
-                <Contact address={address} phone={mainPhone}></Contact>
-                {services && <List list={services}></List>}
-              </div>
-              <div className="col-span-2 pt-5 space-y-10">
-                <div>
-                  {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
-                </div>
-                {geocodedCoordinate && (
-                  <StaticMap
-                    latitude={geocodedCoordinate.latitude}
-                    longitude={geocodedCoordinate.longitude}
-                  ></StaticMap>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </PageLayout>
+      <div
+        className={`relative z-20 w-full bg-cover bg-center h-96 bg-[url(https://a.mktgcdn.com/p-sandbox/xO041TUVCadMyc2cwrqkOnokR4pIO8VJ-HFc2AeW-cI/1680x550.jpg)] `}></div>
+
+      <div class={name} address={address} mainPhone={mainPhone}></div>
+
+
+
+      <div class="text-blue text-3xl">Welcome to the New York City branch</div>
+
+
+      <div class="text-black text-xl">{description}</div>
+
+      <div class="h-44 bg-gradient-to-r from-blue-500 to-cyan-500">
+        <div class={name} address={address} mainPhone={mainPhone}> </div>
+        <Banner name={name} address={address} mainPhone={mainPhone} />
+      </div>
+
+
     </>
-  );
+  )
 };
 
 export default Location;
